@@ -3,6 +3,11 @@ var router = express.Router();
 
 
 
+/* GET New User page. */
+router.get('/newuser', function(req, res) {
+    res.render('newuser', { title: 'Add New User' });
+});
+
 /* POST to Add User Service */
 router.post('/adduser', function(req, res) {
 
@@ -70,10 +75,6 @@ router.get('/userlist', function(req, res) {
     });
 });
 
-/* GET New User page. */
-router.get('/newuser', function(req, res) {
-    res.render('newuser', { title: 'Add New User' });
-});
 /*
 
 
