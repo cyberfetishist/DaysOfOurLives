@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	h1.
+		User List
+	u1
+		each user, i in userlist
+			li
+			table
+				tr
+					td #[strong First Name: ]
+					td= user.firstname
+					td  #[strong Last Name:]
+					td= user.lastname
+					td  #[strong Date of Birth:]
+					td= user.dob
+					td #[strong Current Date: ]
+					td= user.today
+					td #[strong Days Alive: ]
+					td= user.diff
